@@ -20,18 +20,19 @@ interface Project {
 export class ResumeComponent {
   projects: Project[] = [
     {
-      companyName: 'Cyber Infotech, MD',
+      companyName: 'Cyber InfoTech, MD',
       roleName: 'Program Analyst Intern',
       timePeriod: ' Dec 2023 – Present',
-      workPoints: ['Assisted senior developers in analyzing and resolving issues within Java applications, contributing to enhanced functionality and performance.',
-      'Documented code changes, development processes, and project updates, preparing technical documentation and reports to facilitate effective project management and communication.']
+      workPoints: ['Contributed to designing and implementing Java-based E-commerce applications using Java 17, Spring Framework, and Angular, adhering to Agile methodology.',
+      'Assisted senior developers in resolving issues within the application, utilizing Junit test cases for improved functionality.',
+      'Facilitated effective communication between MongoDB database by leveraging Spring MVC.',]
     },
     {
       companyName: 'MagTech Solutions And Corporation, NJ',
       roleName: 'Java Full Stack Developer Intern',
-      timePeriod: 'May 2023 – Nov 2023',
-      workPoints: ['Translated application storyboards and use cases into functional applications, demonstrating a strong understanding of user requirements and the ability to implement them effectively.',
-        'Designed, built, and maintained efficient, reusable, and reliable Java code, ensuring high performance and scalability of applications.']
+      timePeriod: 'April 2023 – Nov 2023',
+      workPoints: ['Translated application storyboards and user requirements into functional applications, showcasing expertise in Java 11, Spring Framework, and Microservices architecture.',
+      'Designed, developed, and maintained efficient Java code with high performance and scalability using JUnit, Maven, HTML5, CSS3, Bootstrap, and MySQL.']
     },
   ];
 }

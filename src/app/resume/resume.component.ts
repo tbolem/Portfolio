@@ -30,7 +30,7 @@ export class ResumeComponent {
     {
       companyName: 'MagTech Solutions And Corporation, NJ',
       roleName: 'Java Full Stack Developer Intern',
-      timePeriod: 'April 2023 – Nov 2023',
+      timePeriod: 'May 2023 – Nov 2023',
       workPoints: ['Translated application storyboards and user requirements into functional applications, showcasing expertise in Java 11, Spring Framework, and Microservices architecture.',
       'Designed, developed, and maintained efficient Java code with high performance and scalability using JUnit, Maven, HTML5, CSS3, Bootstrap, and MySQL.']
     },

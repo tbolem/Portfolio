@@ -24,12 +24,17 @@
     background: rgb(255, 255, 255, 0.3)
     backdrop-filter: blur(10px)
     border-radius: 10px
+    overflow: hidden
+    .typewriter
+      overflow: hidden
+      border-right: .15em solid #05445E
+      white-space: nowrap
+      margin: 0 auto
+      animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite
     h1
       color: white
       font-weight: bolder
       font-size: 4vw
-      i
-        color: black
     h2
       font-weight: bold
       font-size: 3vw
@@ -67,3 +72,18 @@
         height: 19vh
         border-radius: 50%
         object-fit: cover
+
+/* Typing animation */
+@keyframes typing
+  from
+    width: 0
+  to
+    width: 100%
+
+
+/* Blinking cursor animation */
+@keyframes blink-caret
+  from, to
+    border-color: transparent
+  50%
+    border-color: black

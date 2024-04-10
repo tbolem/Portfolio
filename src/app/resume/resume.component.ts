@@ -23,16 +23,15 @@ export class ResumeComponent {
       companyName: 'Cyber InfoTech, MD',
       roleName: 'Program Analyst Intern',
       timePeriod: ' Dec 2023 – Present',
-      workPoints: ['Contributed to designing and implementing Java-based E-commerce applications using Java 17, Spring Framework, and Angular, adhering to Agile methodology.',
-      'Assisted senior developers in resolving issues within the application, utilizing Junit test cases for improved functionality.',
-      'Facilitated effective communication between MongoDB database by leveraging Spring MVC.',]
+      workPoints: ['* Interning as Program Analyst, implementing the Java-based E-commerce application using Java 17, Spring Framework, and Angular, adhering to Agile methodology.'
+      ,'* Successfully orchestrated the deployment of Microservice architecture using RESTful services.']
     },
     {
       companyName: 'MagTech Solutions And Corporation, NJ',
       roleName: 'Java Full Stack Developer Intern',
       timePeriod: 'May 2023 – Nov 2023',
-      workPoints: ['Translated application storyboards and user requirements into functional applications, showcasing expertise in Java 11, Spring Framework, and Microservices architecture.',
-      'Designed, developed, and maintained efficient Java code with high performance and scalability using JUnit, Maven, HTML5, CSS3, Bootstrap, and MySQL.']
+      workPoints: ['* Implemented RESTful APIs using Java 11 for inter-service communication, ensuring efficient and decoupled interactions within the Microservices ecosystem.',
+      '* Utilized MySQL to access data in the database at different levels, responsible for implementing SQL queries and managing JDBC interactions with data sources.']
     },
   ];
 }

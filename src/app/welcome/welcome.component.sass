@@ -10,7 +10,6 @@
   background: linear-gradient(to right, #43C6AC, #191654)
   padding: 35px
   border-radius: 10px
-  gap: 10px
   flex-wrap: nowrap
   overflow: hidden
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
@@ -27,7 +26,7 @@
     overflow: hidden
     .typewriter
       overflow: hidden
-      border-right: .15em solid #05445E
+      border-right: 5px solid #05445E
       white-space: nowrap
       margin: 0 auto
       animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite
@@ -43,7 +42,7 @@
     img
       width: 30vw
       height: 62vh
-      border-radius: 50%
+      border-radius: 10%
       object-fit: cover
 
 /* Styles for medium screen*/
@@ -51,8 +50,10 @@
   .welcome
     padding: 25px
     .welcome-text
-      width: 50%
-      padding: 10px
+      width: 40vw
+      padding: 0 10px
+      .typewriter
+        border-right: 3px solid #05445E
     .welcome-img
       img
         width: 37vw
@@ -63,14 +64,16 @@
     margin: 70px auto 20px
     padding: 15px
     .welcome-text
-      width: 50%
-      padding: 10px
+      width: 40vw
+      padding: 0 10px
+      .typewriter
+        border-right: 3px solid #05445E
     .welcome-img
-      width: 50%
+      width: 45%
       img
+        padding: 0 5px
         width: 40vw
         height: 19vh
-        border-radius: 50%
         object-fit: cover
 
 /* Typing animation */

@@ -11,9 +11,7 @@
         <h1>{{ project.companyName }}</h1>
         <p><i>{{ project.timePeriod }}</i></p>
         <h3>{{ project.roleName }}</h3>
-        <ul>
-          <li *ngFor="let point of project.workPoints"><span [innerHTML]="point | boldText"></span></li>
-        </ul>
+        <h6 *ngFor="let point of project.workPoints"><span [innerHTML]="point | boldText"></span></h6>
       </div>
     </ng-template>
 

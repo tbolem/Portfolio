@@ -5,11 +5,12 @@ import {ResumeComponent} from "./resume/resume.component";
 import {WelcomeComponent} from "./welcome/welcome.component";
 import {ContactComponent} from "./contact/contact.component";
 import {AboutMeComponent} from "./about-me/about-me.component";
+import {SkillsComponent} from "./skills/skills.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ResumeComponent, WelcomeComponent, ContactComponent, AboutMeComponent],
+  imports: [CommonModule, RouterOutlet, ResumeComponent, WelcomeComponent, ContactComponent, AboutMeComponent, SkillsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })

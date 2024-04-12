@@ -15,7 +15,18 @@ import {SkillsComponent} from "./skills/skills.component";
   styleUrl: './app.component.sass'
 })
 export class AppComponent {
+  isOffcanvasOpen = false;
+  title: 'Teja-Portfolio' | undefined;
 
+  toggleOffcanvas() {
+    this.isOffcanvasOpen = !this.isOffcanvasOpen;
+  }
+
+  closeOffcanvas() {
+    this.isOffcanvasOpen = false;
+  }
+
+  ngOnInit() { }
 }
 
 

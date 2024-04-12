@@ -43,7 +43,9 @@
 
 /* Navbar for the phones*/
 nav
-  display: none
+  display: none /* Maintain existing display property */
+  opacity: 0 /* Hide the nav by default */
+  transition: opacity 0.5s ease-in-out
 
 /* Footer styles */
 footer
@@ -65,7 +67,6 @@ footer
       width: 100%
       display: flex
       flex-direction: column
-      margin: 10px 0
       .footer-links
         width: 50%
         margin: 10px auto
@@ -111,29 +112,50 @@ footer
       p
         margin-bottom: 0
 
+.d-none
+  display: none /* Hide by default */
+
+.d-md-block
+  display: block !important /* Show only on medium screens and above */
 
 /* Styles for Phone*/
 @media screen and (max-width: 600px)
   .navbar-mine
     display: none
   nav
-    display: block
-    padding: 5px
-    margin-bottom: 20px
-    background-color: white
-    .container-fluid
-      a, h5
-        background: linear-gradient(to right, #30CFD0 0%, #330867 100%)
-        background-clip: text
-        color: transparent
-        font-family: Jenthill, sans-serif
-        font-size: 6vw
-    .offcanvas-body
-      a
-        font-family: -apple-system
-        font-size: 4.5vw
-        color: #647D87
-        font-weight: 500
+    opacity: 1
+    background: white
+    display: flex
+    justify-content: space-between
+    padding: 0
+    h1
+      background: linear-gradient(to right, #30CFD0 0%, #330867 100%)
+      background-clip: text
+      color: transparent
+      font-family: Jenthill, sans-serif
+      text-align: center
+      width: 35vw
+      padding: 10px
+    h5
+      background: linear-gradient(to right, #30CFD0 0%, #330867 100%)
+      background-clip: text
+      color: transparent
+      font-family: Jenthill, sans-serif
+      font-size: 32px
+    .container
+      width: 50%
+      padding: 0
+      margin: 0
+      .offcanvas
+        background: #161617
+        .offcanvas-body
+          color: white
+          font-size: 24px
+          font-weight: bold
+    button
+      font-size: 18px
+      margin: 8px 8px 8px 0
+
   footer
     .footer-float
       .signature
@@ -152,7 +174,8 @@ footer
           justify-content: space-evenly
           a
             font-size: 18px
-
+  .line
+    margin: 5px 0
 
 /* All Key Frames */
 @keyframes circle-in-hesitate

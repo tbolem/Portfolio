@@ -2,6 +2,9 @@
   width: 80%
   margin: 20px auto
   font-family: -apple-system, serif
+  h2
+    text-align: center
+    font-weight: bold
   .carousel-nav
     display: flex
     justify-content: space-around
@@ -14,20 +17,34 @@
       color: white
       text-decoration: none
       padding: 5px
+      font-weight: bold
     a:hover
       background: white
       color: black
       border-radius: 5px
     .skills
       margin: 5px 0
+      background: #A1C398
+      color: #FA7070
       .dec
-        overflow: hidden
-        width: 100%
-        background: #A1C398
-        color: #FA7070
+        width: 80%
+        margin: auto
         h2
+          background: #F2613F
+          color: #0C0C0C
+          padding: 5px 10px
+          border-radius: 5px
           text-align: center
         .all-icons
           display: flex
           justify-content: space-around
+          align-items: center
           flex-wrap: wrap
+
+/* Styles for Phone*/
+@media screen and (max-width: 600px)
+  .carousel
+    .carousel-nav
+      a
+        padding: 2px
+        font-size: 16px

@@ -1,6 +1,6 @@
 import {Component, Renderer2} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterOutlet} from '@angular/router';
 import {ResumeComponent} from "./resume/resume.component";
 import {WelcomeComponent} from "./welcome/welcome.component";
 import {ContactComponent} from "./contact/contact.component";
@@ -10,7 +10,7 @@ import {SkillsComponent} from "./skills/skills.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ResumeComponent, WelcomeComponent, ContactComponent, AboutMeComponent, SkillsComponent],
+  imports: [CommonModule, RouterOutlet, ResumeComponent, WelcomeComponent, ContactComponent, AboutMeComponent, SkillsComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })

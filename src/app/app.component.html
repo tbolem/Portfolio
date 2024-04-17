@@ -3,8 +3,8 @@
   <h1 href="#home">Teja Bolem</h1>
   <div class="nav-links">
     <a href="">Home</a>
-    <a href="#about-me">About</a>
     <a href="#exp">Experience</a>
+    <a href="https://tjport.netlify.app/about">About</a>
     <a href="#contact">Contact</a>
   </div>
 </div>
@@ -24,10 +24,10 @@
             <a class="nav-link" href="#" (click)="closeOffcanvas()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about-me" (click)="closeOffcanvas()">About</a>
+            <a class="nav-link" href="#exp" (click)="closeOffcanvas()">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#exp" (click)="closeOffcanvas()">Experience</a>
+            <a class="nav-link" routerLink="https://tjport.netlify.app/about" (click)="closeOffcanvas()">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact" (click)="closeOffcanvas()">Contact</a>
@@ -47,10 +47,6 @@
   <app-welcome></app-welcome>
 </div>
 
-<div id="about-me">
-  <app-about-me></app-about-me>
-</div>
-
 <div id="exp">
   <app-resume></app-resume>
 </div>
@@ -67,7 +63,7 @@
   <div class="footer-float">
     <div class="signature">
       <div class="footer-links">
-        <a href="https://www.linkedin.com/in/tjsbc83/">
+        <a href="https://www.linkedin.com/in/tejab83/">
           <svg xmlns="http://www.w3.org/2000/svg"
                fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
             <path
@@ -85,7 +81,7 @@
 
       <div class="footer-nav">
         <a href="">Home</a>
-        <a href="#about-me">About</a>
+        <a routerLink="https://tjport.netlify.app/about">About</a>
         <a href="#exp">Experience</a>
       </div>
     </div>

@@ -18,8 +18,8 @@ import {CommonModule} from "@angular/common";
         transform: 'translateX(100%)',
         opacity: 0
       })),
-      transition('in => out', animate('300ms ease-in-out')),
-      transition('out => in', animate('300ms ease-in-out'))
+      transition('in => out', animate('1000ms ease')),
+      transition('out => in', animate('1000ms ease'))
     ])
   ]
 })

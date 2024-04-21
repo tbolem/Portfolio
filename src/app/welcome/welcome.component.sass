@@ -5,7 +5,7 @@
   align-content: center
   width: 90%
   height: auto
-  margin: 10px auto
+  margin: 20px auto
   color: #05445E
   background: linear-gradient(to right, #43C6AC, #191654)
   padding: 35px
@@ -91,3 +91,230 @@
     border-color: transparent
   50%
     border-color: black
+
+
+/* styles of skills section */
+.skills-section
+  width: 90%
+  height: auto
+  color: #322C2B
+  margin: 20px auto
+  font-family: -apple-system, serif
+  padding: 20px
+  border-radius: 10px
+  h2
+    color: #135D66
+    text-align: center
+    font-weight: bold
+  .carousel-nav
+    display: flex
+    justify-content: space-around
+    padding: 5px
+    margin: 5px
+    a
+      text-decoration: none
+      padding: 5px
+      color: #77B0AA
+      font-weight: bold
+      border-bottom: grey solid 2px
+    a:hover
+      color: #000 /* Added hover effect */
+      padding: 5px
+      border-bottom: black solid 2px
+    a:active
+      padding: 5px
+      border-bottom: solid 2px black
+  .skills
+    width: 90%
+    margin: 5px auto
+    background: #E1F7F5
+    padding: 5px
+    border-radius: 5px
+    .skill-items
+      width: 90%
+      margin: auto
+      display: flex
+      justify-content: space-evenly
+      padding: 10px 0
+      .skill-img
+        width: 35%
+        img
+          width: 100%
+      .rest
+        width: 60%
+        padding: 10px
+        p
+          font-weight: bold
+          color: #003C43
+          font-size: 24px
+          padding: 5px 10px
+          border-radius: 5px
+          text-align: center
+        .icons
+          display: flex
+          justify-content: center
+          align-items: center
+          flex-wrap: wrap
+
+/* Styles for Phone*/
+@media screen and (max-width: 600px)
+  .skills-section
+    background: white
+    height: auto
+    .skills
+      .skill-items
+        width: 100%
+        flex-direction: column
+        justify-content: space-evenly
+        align-items: center
+        .skill-img
+          width: 50%
+          height: 50%
+        .rest
+          width: 100%
+          p
+            padding: 0
+          .icons
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: row
+
+/* styles for resume section*/
+.projects
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center
+  background-color: #FFEC9E
+  color: white
+  width: 90%
+  height: auto
+  margin: auto
+  border-radius: 10px
+  padding: 20px
+  h2
+    color: black
+    font-weight: bold
+    font-size: 4vw
+  .resume
+    width: 60%
+    margin: 0 auto
+    color: #0E2954
+    background-color: #FFBB70
+    border: white 2px solid
+    text-align: center
+    align-items: center
+    font-weight: bold
+    padding: 15px
+    border-radius: 10px
+    h1
+      color: black
+      font-weight: bold
+    h3
+      font-weight: bold
+      color: #092635
+    p
+      font-size: 18px
+    h6
+      padding: 5px
+      font-size: 20px
+
+@media screen and (max-width: 600px)
+  .projects
+    padding: 20px
+    height: auto
+    overflow: hidden
+    h2
+      font-size: 7vw
+    .resume
+      width: 90%
+      h6
+        font-size: 18px
+
+/* Footer styles */
+footer
+  width: 100%
+  height: auto
+  background: linear-gradient(to bottom, #000000, #243B55)
+  position: relative
+  .footer-float
+    width: 80%
+    margin: auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    padding: 10px
+    // padding: 10px 50px 20px 60px
+    .signature
+      width: 100%
+      display: flex
+      flex-direction: column
+      .footer-links
+        width: 50%
+        margin: 10px auto
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+        a
+          color: white
+          svg
+            width: 32px
+            height: 32px
+      .footer-nav
+        width: 50%
+        margin: 10px auto
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding: 5px 20px
+        background-color: #36454F
+        border-radius: 5px
+        a
+          text-decoration: none
+          color: white
+          font-weight: bold
+          font-size: 20px
+          padding: 3px 10px
+        a:hover
+          background-color: white
+          padding: 3px 10px
+          color: #4DADFA
+          border-radius: 5px
+    .line
+      width: 100%
+      margin: 5px 0
+      border: #989898 solid 1px
+      border-radius: 5px
+    .signature-text
+      font-size: 14px
+      font-weight: bold
+      color: white
+      font-family: -apple-system
+      p
+        margin-bottom: 0
+
+@media screen and (max-width: 600px)
+  footer
+    .footer-float
+      .signature
+        .footer-links
+          width: 80%
+          margin: auto
+          padding: 10px 0
+          a
+            svg
+              width: 26px
+              height: 26px
+        .footer-nav
+          width: 90%
+          margin: 10px auto 0
+          padding: 5px 0
+          justify-content: space-evenly
+          a
+            font-size: 18px
+  .line
+    margin: 5px 0

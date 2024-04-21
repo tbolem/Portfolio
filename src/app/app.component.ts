@@ -1,20 +1,20 @@
-import {Component, Renderer2} from '@angular/core';
+import {Component, OnInit, Renderer2, ViewEncapsulation} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {ResumeComponent} from "./resume/resume.component";
-import {WelcomeComponent} from "./welcome/welcome.component";
 import {ContactComponent} from "./contact/contact.component";
 import {AboutMeComponent} from "./about-me/about-me.component";
-import {SkillsComponent} from "./skills/skills.component";
+import {animate, state, style, transition, trigger} from "@angular/animations";
+import {BoldTextPipe} from "./bold-text.pipe";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ResumeComponent, WelcomeComponent, ContactComponent, AboutMeComponent, SkillsComponent],
+  imports: [CommonModule, RouterOutlet, ResumeComponent, ContactComponent, AboutMeComponent, BoldTextPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })
-export class AppComponent {
+export class AppComponent{
   isOffcanvasOpen = false;
   title: 'Teja-Portfolio' | undefined;
 
@@ -25,8 +25,6 @@ export class AppComponent {
   closeOffcanvas() {
     this.isOffcanvasOpen = false;
   }
-
-  ngOnInit() { }
 }
 
 

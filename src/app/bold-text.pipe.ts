@@ -10,8 +10,8 @@ interface Replacement {
 })
 export class BoldTextPipe implements PipeTransform {
   private replacements: Replacement[] = [
-    { original: 'Full Stack Java Developer', boldVersion: '<strong>Full Stack Java Developer</strong>' },
-    { original: 'Senior Java Developer', boldVersion: '<strong>Senior Java Developer</strong>'},
+    { original: 'Program Analyst', boldVersion: '<strong>Program Analyst</strong>' },
+    { original: 'Full Stack Java Developer', boldVersion: '<strong>Full Stack Java Developer</strong>'},
     // Add more replacements as needed
   ];
 

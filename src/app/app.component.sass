@@ -30,8 +30,8 @@
       text-decoration: none
       color: #0E2954
       padding: 3px 10px
-      font-weight: bolder
-      font-size: 20px
+      font-weight: bold
+      font-size: 22px
       border-bottom: white solid 3px
     a:hover
       // background-color: white
@@ -43,71 +43,6 @@ nav
   display: none /* Maintain existing display property */
   opacity: 0 /* Hide the nav by default */
   transition: opacity 0.5s ease-in-out
-
-/* Footer styles */
-footer
-  width: 100%
-  height: auto
-  background: linear-gradient(to bottom, #000000, #243B55)
-  position: relative
-  .footer-float
-    width: 80%
-    margin: auto
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    position: relative
-    padding: 10px
-    // padding: 10px 50px 20px 60px
-    .signature
-      width: 100%
-      display: flex
-      flex-direction: column
-      .footer-links
-        width: 50%
-        margin: 10px auto
-        display: flex
-        flex-direction: row
-        justify-content: space-around
-        align-items: center
-        a
-          color: white
-          svg
-            width: 32px
-            height: 32px
-      .footer-nav
-        width: 50%
-        margin: 10px auto
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        padding: 5px 20px
-        background-color: #36454F
-        border-radius: 5px
-        a
-          text-decoration: none
-          color: white
-          font-weight: bold
-          font-size: 20px
-          padding: 3px 10px
-        a:hover
-          background-color: white
-          padding: 3px 10px
-          color: #4DADFA
-          border-radius: 5px
-    .line
-      width: 100%
-      margin: 5px 0
-      border: #989898 solid 1px
-      border-radius: 5px
-    .signature-text
-      font-size: 14px
-      font-weight: bold
-      color: white
-      font-family: -apple-system
-      p
-        margin-bottom: 0
 
 .d-none
   display: none /* Hide by default */
@@ -153,26 +88,7 @@ footer
       font-size: 18px
       margin: 8px 8px 8px 0
 
-  footer
-    .footer-float
-      .signature
-        .footer-links
-          width: 80%
-          margin: auto
-          padding: 10px 0
-          a
-            svg
-              width: 26px
-              height: 26px
-        .footer-nav
-          width: 90%
-          margin: 10px auto 0
-          padding: 5px 0
-          justify-content: space-evenly
-          a
-            font-size: 18px
-  .line
-    margin: 5px 0
+
 
 /* All Key Frames */
 @keyframes circle-in-hesitate
@@ -185,3 +101,5 @@ footer
 
 [transition-style="in:circle:hesitate"]
   animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-hesitate both
+
+

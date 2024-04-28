@@ -89,6 +89,15 @@ export class WelcomeComponent implements OnInit{
     deleting();
   }
 
+  downloadResume() {
+    const filePath = 'assets/Resume - Teja B.docx'; // Path to your resume in assets folder
+    const link = document.createElement('a');
+    link.href = `/${filePath}`; // Construct the complete URL for the asset
+    link.target = '_blank'; // Open the download in a new tab
+    link.download = 'Resume - Teja B.docx';
+    link.click();
+  }
+
   //for skills section
   currentSection: string = 'backend'; // Default section
 

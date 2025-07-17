@@ -1,6 +1,6 @@
 .contact
-    background: #EB5B00
-    color: white
+    background: #fae9d7
+    color: #004030
     display: flex
     text-align: center
     align-items: center
@@ -11,12 +11,27 @@
     .text-section
         width: 50%
         padding: 10px
+        h6
+            font-size: 20px
         a
             margin: 3px
         i
             font-size: 6vh
-            color: black
+            color: #93DA97
+            margin: 5px 8px
+        i:hover
+            color: #CFFFE2
     .image-section
-        width: 50%
+        width: 60%
         img
-            width: 70%
+            width: 90%
+
+@media only screen and (max-width: 600px)
+    .contact
+        flex-direction: column
+        .text-section
+            width: 100%
+            i 
+                font-size: 4vh
+        .image-section
+            width: 100%

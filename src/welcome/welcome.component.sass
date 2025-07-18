@@ -22,7 +22,7 @@
     left: 0
     width: 100%
     height: 100%
-    background-color: rgba(255, 255, 255, 0.6)
+    background-color: rgba(50, 50, 50, 0.3)
 
     /* White with opacity
     z-index: 2
@@ -34,13 +34,86 @@
     z-index: 3
     transform: translate(-50%, -50%)
     text-align: center
-    color: #000
+    color: white
     h1
       font-size: 3rem
       margin-bottom: 1rem
 
     p
       font-size: 1.5rem
+
+.project-section
+  background-color: #D4F1F4
+  padding: 60px 20px
+  text-align: center
+  width: 90%
+  margin: 0 auto 10px
+  border-radius: 10px
+
+  .section-title
+    font-size: 36px
+    font-weight: 700
+    margin-bottom: 40px
+    color: #202124
+
+  .project-cards
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    gap: 40px
+
+  .project-card
+    background: white
+    padding: 30px 20px
+    width: 300px
+    border-radius: 16px
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08)
+    text-align: center
+    transition: transform 0.3s ease
+
+    &:hover
+      transform: translateY(-10px)
+
+    .svg-wrapper
+      max-width: 100px
+      margin: 0 auto 20px
+
+      img
+        width: 100%
+        height: auto
+
+    .project-title
+      font-size: 22px
+      font-weight: 600
+      margin-bottom: 10px
+      color: #111
+
+    .project-desc
+      font-size: 15px
+      color: #555
+      margin-bottom: 20px
+
+    .project-link
+      text-decoration: none
+      padding: 10px 16px
+      background: #000
+      color: #fff
+      border-radius: 6px
+      font-weight: 500
+      display: inline-block
+
+      &:hover
+        background: #333
+
+.rotating
+  animation: spin 6s linear infinite
+
+@keyframes spin
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
 
 .resume-section
   height: 50vh
@@ -51,7 +124,7 @@
   flex-direction: column
   justify-content: center
   align-items: center
-  background: linear-gradient(135deg, #f2f6fa, #dbeafe)
+  background: #9FB3DF
   text-align: center
   padding: 2rem
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif

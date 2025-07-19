@@ -241,8 +241,33 @@
   </div>
 </section>
 
+<section class="skills-section">
+  <h2>Skills</h2>
+
+  <div *ngFor="let skill of skills" class="skill-category">
+    <h3>
+      <img
+        [src]="skill.icon"
+        alt="{{ skill.category }} icon"
+        class="category-icon"
+      />
+      {{ skill.category }}
+    </h3>
+
+    <div class="scroller">
+      <div class="scroller__inner">
+        <ng-container *ngFor="let _ of [0, 1, 2, 3, 4, 5]">
+          <ng-container *ngFor="let icon of skill.icons">
+            <img [src]="icon" [alt]="icon" />
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="resume-section">
-  <h1 style="color: white; font-weight: bold;">Know of any job openings?</h1>
+  <h1 style="color: white; font-weight: bold">Know of any job openings?</h1>
   <h3>Please share my resume!</h3>
   <a href="Teja-Resume.docx" download>
     <button class="download-btn">Resume</button>

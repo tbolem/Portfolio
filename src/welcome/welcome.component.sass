@@ -42,18 +42,112 @@
     p
       font-size: 1.5rem
 
+
+.experience-section
+  padding: 4rem 2rem
+  background: #111
+  color: #fff
+  width: 90%
+  margin: 10px auto
+  border-radius: 10px
+  .section-title
+    text-align: center
+    font-size: 2.5rem
+    font-weight: 700
+    color: #fff
+
+  .experience-illustration
+    display: flex
+    justify-content: center
+    margin-bottom: 2rem
+    img
+      max-width: 400px
+      width: 100%
+      height: auto
+      filter: drop-shadow(0 4px 20px rgba(0, 240, 255, 0.2))
+
+.timeline
+  position: relative
+  margin-left: 1rem
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 20px
+    width: 4px
+    height: 100%
+    background: #444
+
+  .timeline-item
+    position: relative
+    margin-bottom: 4rem
+    padding-left: 60px
+
+    .timeline-icon
+      position: absolute
+      left: 0
+      top: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 40px
+      height: 40px
+      border-radius: 50%
+
+    .number-icon
+      background: #222
+      border: 2px solid #00f0ff
+      box-shadow: 0 0 8px rgba(0, 240, 255, 0.3)
+
+      .material-symbols-outlined
+        font-size: 22px
+        color: #00f0ff
+
+    .timeline-content
+      background: rgba(255, 255, 255, 0.05)
+      padding: 1.5rem
+      border-radius: 1rem
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4)
+
+      .job-title
+        font-size: 1.4rem
+        font-weight: 600
+        margin-bottom: 0.3rem
+
+      .company, .duration
+        font-size: 0.9rem
+        color: #bbb
+        display: block
+        margin-bottom: 0.5rem
+
+      .job-description
+        list-style: disc
+        margin-left: 1rem
+        margin-bottom: 1rem
+        li
+          margin-bottom: 0.4rem
+          color: #ddd
+          font-size: 0.95rem
+
+      .tools
+        font-size: 0.85rem
+        color: #00f0ff
+        font-weight: 500
+
+
 .project-section
   background-color: #D4F1F4
-  padding: 60px 20px
+  padding: 30px 20px
   text-align: center
   width: 90%
-  margin: 0 auto 10px
+  margin: 10px auto
   border-radius: 10px
 
   .section-title
     font-size: 36px
     font-weight: 700
-    margin-bottom: 40px
+    margin-bottom: 15px
     color: #202124
 
   .project-cards

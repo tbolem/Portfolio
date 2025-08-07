@@ -96,9 +96,12 @@
                 }             
             ],
             "styles": [
+              "node_modules/aos/dist/aos.css",
               "src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/aos/dist/aos.js"
+            ]
           }
         }
       }

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-welcome',
@@ -56,4 +57,13 @@ skills = [
   }
 ];
 
+// Data for the university section
+  universityData = [
+    {
+      location: 'Kent, OH',
+      degree: 'B.S. in Computer Science',
+      dates: 'Aug 2020 - May 2023',
+      logoUrl: 'kent-logo.png'
+    },
+  ];
 }

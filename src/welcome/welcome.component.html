@@ -27,7 +27,7 @@
         <span class="material-symbols-outlined">looks_3</span>
       </div>
       <div class="timeline-content">
-        <h3 class="job-title">Jr Java Developer</h3>
+        <h3 class="job-title">Java Developer</h3>
         <span class="company">Princeton IT Services</span>
         <span class="duration">May 2024 – Present</span>
         <ul class="job-description">
@@ -72,7 +72,7 @@
         <span class="material-symbols-outlined">looks_two</span>
       </div>
       <div class="timeline-content">
-        <h3 class="job-title">Program Analyst Intern</h3>
+        <h3 class="job-title">Program Analyst (Java)</h3>
         <span class="company">Cyber Infotech LLC </span>
         <span class="duration">Dec 2023 – April 2024</span>
         <ul class="job-description">
@@ -105,7 +105,7 @@
         <span class="material-symbols-outlined">looks_one</span>
       </div>
       <div class="timeline-content">
-        <h3 class="job-title">Java Full Stack Developer Intern</h3>
+        <h3 class="job-title">Full Stack Java Developer Intern</h3>
         <span class="company">MagTech Solutions and Corporation </span>
         <span class="duration">May 2023 – Nov 2023</span>
         <ul class="job-description">
@@ -262,6 +262,23 @@
           </ng-container>
         </ng-container>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="university-section">
+  <h2 class="section-title">University</h2>
+
+  <div class="university-card" *ngFor="let school of universityData; let i = index">
+    
+    <div class="university-logo">
+      <img [src]="school.logoUrl" [alt]=" 'Kent State logo' + ' logo'">
+    </div>
+    
+    <div class="university-details">
+      <p class="location"><i>{{ school.location }}</i></p>
+      <p class="degree">{{ school.degree }}</p>
+      <p class="dates">{{ school.dates }}</p>
     </div>
   </div>
 </section>

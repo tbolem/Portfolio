@@ -271,7 +271,7 @@
 
 .university-section
   padding: 2rem
-  background-image: linear-gradient(to right top, #136f97, #006fa0, #006ea9, #006db1, #006bb9, #016fbf, #0274c4, #0278ca, #0084cf, #008fd2, #079ad4, #27a5d6)
+  background: #189AB4 
   color: white
   text-align: center
   color: white
@@ -289,24 +289,52 @@
     align-items: center
     justify-content: center
     width: 50%
-    background: #D4F1F4
+    height: auto
+    padding: 10px
+    background: white
     margin: auto
     border-radius: 10px
   .university-logo
     img 
       width: 50%
       height: auto
-  .university-details
-    text-align: center
-    font-size: 1.2rem
-    color: #111
-    .degree
-      font-weight: bold
-      color: black
-      margin: 0
-    .dates
-      font-style: italic
-      color: #555
+  .uni-design
+    width: 100%
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    .edu-illustration
+      width: 50%
+      img
+        width: 100%
+        height: auto
+    .university-card
+      width: 40%
+      text-align: center
+      font-size: 1.2rem
+      color: #111
+    .university-details
+      .gpa
+        font-weight: bold
+        color: #A3EBB1
+        background: black
+        border-radius: 5px
+        width: 50%
+        margin: auto
+      a
+        color: #116530
+      a:visited
+        color: #05445E
+      .degree
+        font-weight: bold
+        color: black
+        margin: 0
+      .dates
+        font-style: italic
+        color: #555
+      .description
+        width: 100%
+        font-family: "Inter", serif
 
 .resume-section
   height: 50vh
@@ -352,6 +380,30 @@
       transform: scale(0.98)
 
 
+.scroll-top-btn
+  position: fixed
+  bottom: 20px
+  right: 15px
+  z-index: 99
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 50px
+  height: 50px
+  background: #111
+  border-radius: 50%
+  text-decoration: none
+  transition: all 0.3s ease-in-out
+
+  &:hover
+    background: white
+    transform: translateY(-3px) scale(1.05)
+
+  svg
+    width: 28px
+    height: 28px
+  
+
 @media only screen and (max-width: 600px)
   .video-container
     position: relative
@@ -363,6 +415,10 @@
   .timeline
     margin: 0
 
+  .scroll-top-btn
+    position: fixed
+    bottom: 30px
+    right: 25px
   .skill-category h3
     width: 52%
   .experience-illustration
@@ -379,10 +435,16 @@
     height: 30vh
 
   .university-section
-    .university-card
-      width: 80%
-    .university-logo
-      img 
-        width: 70%
-    .university-details
-      font-size: 1rem
+    .uni-design
+      flex-direction: column
+      .edu-illustration
+        width: 100%
+        img
+          width: 100%
+      .university-card
+        width: 100%
+      .university-logo
+        img 
+          width: 70%
+      .university-details
+        font-size: 1rem

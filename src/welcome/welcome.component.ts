@@ -63,6 +63,8 @@ skills = [
       location: 'Kent, OH',
       degree: 'B.S. in Computer Science',
       dates: 'Aug 2020 - May 2023',
+      description: 'Graduated with a Bachelor of Science in Computer Science from Kent State University, focusing on software development and data structures.',
+      gpa: '3.732',
       logoUrl: 'kent-logo.png'
     },
   ];

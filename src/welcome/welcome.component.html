@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 <div class="video-container">
   <video autoplay muted loop playsinline class="background-video">
     <source src="bg-vid.mp4" type="video/mp4" />
@@ -28,7 +30,9 @@
       </div>
       <div class="timeline-content">
         <h3 class="job-title">Java Developer</h3>
-        <span class="company">Princeton IT Services</span>
+        <a href="https://www.princetonits.com" class="company"
+          >Princeton IT Services</a
+        >
         <span class="duration">May 2024 – Present</span>
         <ul class="job-description">
           <li>
@@ -73,7 +77,9 @@
       </div>
       <div class="timeline-content">
         <h3 class="job-title">Program Analyst (Java)</h3>
-        <span class="company">Cyber Infotech LLC </span>
+        <a href="https://cyberinfotek.com/" class="company"
+          >Cyber Infotech LLC
+        </a>
         <span class="duration">Dec 2023 – April 2024</span>
         <ul class="job-description">
           <li>
@@ -106,7 +112,9 @@
       </div>
       <div class="timeline-content">
         <h3 class="job-title">Full Stack Java Developer Intern</h3>
-        <span class="company">MagTech Solutions and Corporation </span>
+        <a href="https://magtechcorp.com/" class="company"
+          >MagTech Solutions and Corporation
+        </a>
         <span class="duration">May 2023 – Nov 2023</span>
         <ul class="job-description">
           <li>
@@ -269,24 +277,57 @@
 <section class="university-section">
   <h2 class="section-title">University</h2>
 
-  <div class="university-card" *ngFor="let school of universityData; let i = index">
-    
-    <div class="university-logo">
-      <img [src]="school.logoUrl" [alt]=" 'Kent State logo' + ' logo'">
+  <div class="uni-design">
+    <div class="edu-illustration">
+      <img src="edu.png" alt="Education Illustration" />
     </div>
-    
-    <div class="university-details">
-      <p class="location"><i>{{ school.location }}</i></p>
-      <p class="degree">{{ school.degree }}</p>
-      <p class="dates">{{ school.dates }}</p>
+    <div
+      class="university-card"
+      *ngFor="let school of universityData; let i = index"
+    >
+      <div class="university-logo">
+        <a href="https://www.kent.edu/">
+          <img [src]="school.logoUrl" [alt]="'Kent State logo' + ' logo'" />
+        </a>
+      </div>
+
+      <div class="university-details">
+        <p class="location">
+          <i>{{ school.location }}</i>
+        </p>
+        <p class="gpa"><b>GPA</b>: {{ school.gpa }}</p>
+        <p class="degree">{{ school.degree }}</p>
+        <p class="dates">{{ school.dates }}</p>
+        <p class="description">{{ school.description }}</p>
+        <a href="S2022 Dean's List.pdf" download class="download-link">
+          <b>Awards</b>: <i>Dean's List Spring 2022</i>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <div class="resume-section">
   <h1 style="color: white; font-weight: bold">Know of any job openings?</h1>
-  <h3>Please share my resume!</h3>
+  <h3>Kindly please share my resume!</h3>
   <a href="Teja-Resume.docx" download>
     <button class="download-btn">Resume</button>
   </a>
 </div>
+
+<a href="#top" class="scroll-top-btn" aria-label="Scroll to top">
+  <svg width="30" height="30" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_105_560)">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M200 100.671L100 0L0 100.671H98.6668L0 200H200L101.333 100.671H200Z" fill="url(#paint0_linear_105_560)"/>
+    </g>
+    <defs>
+      <linearGradient id="paint0_linear_105_560" x1="20.5" y1="16" x2="100" y2="200" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#ACAAFF"/>
+        <stop offset="1" stop-color="#C0E8FF"/>
+      </linearGradient>
+      <clipPath id="clip0_105_560">
+        <rect width="200" height="200" fill="white"/>
+      </clipPath>
+    </defs>
+  </svg>
+</a>

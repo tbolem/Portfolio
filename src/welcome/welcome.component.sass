@@ -379,41 +379,108 @@
     &:active
       transform: scale(0.98)
 
+.carousel-container
+  width: 100%
+  max-width: 1100px
+  margin: 40px auto
+  overflow: hidden
+  position: relative
 
-.scroll-top-btn
-  position: fixed
-  bottom: 20px
-  right: 15px
-  z-index: 99
+.carousel-track
   display: flex
-  align-items: center
-  justify-content: center
-  width: 50px
-  height: 50px
-  background: #111
+  transition: transform 0.5s ease-in-out
+
+.card
+  min-width: 300px
+  max-width: 320px
+  flex: 0 0 auto
+  margin: 0 10px
+  background: #fff
+  border-radius: 12px
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1)
+  padding: 20px
+  text-align: left
+
+  .logo
+    text-align: center
+    margin-bottom: 12px
+
+    img
+      max-height: 40px
+      max-width: 120px
+      object-fit: contain
+
+  h3
+    font-size: 1.1rem
+    margin-bottom: 8px
+    color: #333
+
+  p
+    margin: 6px 0
+    font-size: 0.9rem
+    color: #555
+
+  a
+    display: inline-block
+    margin-top: 10px
+    text-decoration: none
+    background: #0073e6
+    color: #fff
+    padding: 8px 14px
+    border-radius: 6px
+    transition: background 0.3s ease
+
+    &:hover
+      background: #005bb5
+
+.carousel-btn
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  background: rgba(0,0,0,0.5)
+  border: none
+  color: #fff
+  font-size: 1.5rem
+  padding: 10px
+  cursor: pointer
   border-radius: 50%
-  text-decoration: none
-  transition: all 0.3s ease-in-out
+  z-index: 10
 
-  &:hover
-    background: white
-    transform: translateY(-3px) scale(1.05)
+  &.left
+    left: 10px
+  &.right
+    right: 10px
 
-  svg
-    width: 28px
-    height: 28px
-  
+@media (max-width: 768px)
+  .card
+    min-width: 260px
+    max-width: 280px
+
+@media (max-width: 480px)
+  .card
+    min-width: 90%
+    max-width: 90%
+    margin: 0 auto
+
+  .carousel-btn
+    display: none
+
 
 @media only screen and (max-width: 600px)
   .video-container
     position: relative
     height: 50vh
     width: 90%
+    margin: 30px auto 10px
     .text-overlay
         width: 90%
 
   .timeline
     margin: 0
+    .timeline-item
+      padding: 5px 0 5px 42px
+      margin: 10px
+
 
   .scroll-top-btn
     position: fixed

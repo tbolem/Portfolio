@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -9,7 +9,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrl: './welcome.component.sass'
 })
 export class WelcomeComponent {
-skills = [
+
+  skills = [
   {
     category: 'Backend',
     icon: 'Skills/backend.png',
@@ -68,4 +69,97 @@ skills = [
       logoUrl: 'kent-logo.png'
     },
   ];
+
+   @ViewChild('carouselTrack') carouselTrack!: ElementRef;
+
+  certifications = [
+    {
+      name: 'Prompt Engineering & Programming with OpenAI',
+      issuer: 'Columbia+',
+      issuedDate: 'Aug 2025',
+      credentialId: '158757339',
+      link: 'https://example.com', // replace with real link
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/1/19/Columbia_University_Logo.svg'
+    },
+    {
+      name: 'Microsoft Certified: Security, Compliance, and Identity Fundamentals',
+      issuer: 'Microsoft',
+      issuedDate: 'Feb 2025',
+      expiryDate: 'Feb 2027',
+      credentialId: 'YF5035-BF95B6',
+      link: 'https://learn.microsoft.com', // replace
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg'
+    },
+    {
+      name: 'SC-900: Microsoft Security, Compliance, & Identity with SIMS',
+      issuer: 'Udemy',
+      issuedDate: 'Jan 2025',
+      credentialId: 'UC-9b47ada1-da7e-45cd-9aa5-2be424bf4f0e.pdf',
+      link: 'https://udemy.com/certificate', // replace
+      logo: 'https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg'
+    },
+    {
+      name: 'Introduction to Git and GitHub',
+      issuer: 'Coursera',
+      issuedDate: 'Jul 2021',
+      credentialId: '5LQNWFUV6MY7',
+      link: 'https://coursera.org', // replace
+      logo: 'https://about.coursera.org/static/partners/images/logos/coursera-logo.svg'
+    },
+    {
+      name: 'Object-Oriented Data Structures in C++',
+      issuer: 'Coursera (University of Illinois)',
+      issuedDate: 'Aug 2020',
+      credentialId: 'T744LL8PGANH',
+      link: 'https://coursera.org', // replace
+      logo: 'https://about.coursera.org/static/partners/images/logos/coursera-logo.svg'
+    },
+    {
+      name: 'Troubleshooting and Debugging Techniques',
+      issuer: 'Coursera',
+      issuedDate: 'No date provided',
+      credentialId: 'PQHJPYPBTKHM',
+      link: 'https://coursera.org', // replace
+      logo: 'https://about.coursera.org/static/partners/images/logos/coursera-logo.svg'
+    }
+  ];
+
+  index = 0;
+  cardWidth = 0;
+  visibleCards = 0;
+  maxIndex = 0;
+
+  ngAfterViewInit() {
+    this.calculateSizes();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.calculateSizes();
+    
+  }
+
+  private calculateSizes() {
+    const container = this.carouselTrack.nativeElement.parentElement as HTMLElement;
+    const firstCard = this.carouselTrack.nativeElement.querySelector('.card') as HTMLElement;
+
+    if (firstCard) {
+      this.cardWidth = firstCard.offsetWidth + 20; // account for margin
+      this.visibleCards = Math.floor(container.offsetWidth / this.cardWidth);
+      this.maxIndex = this.certifications.length - this.visibleCards;
+      if (this.index > this.maxIndex) this.index = this.maxIndex;
+      this.updateCarousel();
+    }
+  }
+
+  moveCarousel(direction: number) {
+    this.index += direction;
+    if (this.index < 0) this.index = 0;
+    if (this.index > this.maxIndex) this.index = this.maxIndex;
+    this.updateCarousel();
+  }
+
+  private updateCarousel() {
+    this.carouselTrack.nativeElement.style.transform = `translateX(${-this.index * this.cardWidth}px)`;
+  }
 }

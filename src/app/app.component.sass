@@ -22,6 +22,55 @@ nav
             background: Black
             color: #00f0ff
 
+.mobile-nav
+  display: none
+  color: black
+
+  .bottom-nav
+    width: 80%
+    margin: 10px auto 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 15px 10px 10px
+    background: white
+    border: 1px solid #661111 
+    border-radius: 15px
+    position: fixed
+    z-index: 1000
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+
+    .navbar-left
+      width: 40%
+      display: flex
+      align-items: center
+      img
+        width: 30%
+        height: auto
+
+    .menu-toggle
+      font-size: 28px
+      cursor: pointer
+
+    .mobile-links
+      width: 55%
+      display: flex
+      justify-content: space-between
+      top: 60px
+      right: 0
+      width: 50%
+      gap: 1rem
+      border-radius: 8px
+      z-index: 100
+
+      a.material-symbols-outlined
+        font-family: 'Material Symbols Outlined'
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        font-size: 28px
+        color: black
+        text-decoration: none
 
 
 footer
@@ -50,11 +99,11 @@ footer
 
 @media only screen and (max-width: 600px)
     nav
-        .nav-img 
-            width: 25%
-            img
-                width: 40%
+        display: none
+    .mobile-nav
+        display: block
     footer
+        padding: 25px 20px 85px
         svg
             width: 40%
             height: 17vw

@@ -223,7 +223,8 @@
   h2
     font-size: 2.5rem
     margin-bottom: 2rem
-    font-weight: bold
+    font-family: kizard, sans-serif
+    color: #001510
 
 .skill-category h3
   display: flex
@@ -271,7 +272,7 @@
 
 .university-section
   padding: 2rem
-  background: #189AB4 
+  background: #1d9bb2
   color: white
   text-align: center
   color: white
@@ -283,6 +284,7 @@
   .section-title
     font-size: 2.5rem
     font-family: kizard, sans-serif
+    color: #004769
   .university-card
     display: flex
     flex-direction: column
@@ -291,7 +293,7 @@
     width: 50%
     height: auto
     padding: 10px
-    background: white
+    background-image: linear-gradient(#ffffff, #1d9bb2)
     margin: auto
     border-radius: 10px
   .university-logo
@@ -316,15 +318,15 @@
     .university-details
       .gpa
         font-weight: bold
-        color: #A3EBB1
+        color: #00bf8f
         background: black
         border-radius: 5px
         width: 50%
         margin: auto
       a
-        color: #116530
+        color: #08fc91
       a:visited
-        color: #05445E
+        color: #08a0a3
       .degree
         font-weight: bold
         color: black
@@ -379,91 +381,136 @@
     &:active
       transform: scale(0.98)
 
-.carousel-container
-  width: 100%
-  max-width: 1100px
-  margin: 40px auto
-  overflow: hidden
-  position: relative
-
-.carousel-track
+/* Main container styling */
+.certifications-container
+  font-family: 'Kizard', sans-serif
   display: flex
-  transition: transform 0.5s ease-in-out
+  flex-direction: column
+  align-items: center
+  padding: 40px 20px
+  background-color: #3be06d
+  width: 90%
+  margin: 10px auto
+  border-radius: 15px
+  height: auto
+.section-title
+  font-size: 2.5rem
+  font-family: kizard, sans-serif
+  color: #001510
+  margin-bottom: 40px
+  text-align: center
 
+/* Grid container for the cards */
+.cards-grid
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  gap: 30px
+  width: 100%
+  max-width: 1200px
+
+/* Individual card styling */
 .card
-  min-width: 300px
-  max-width: 320px
-  flex: 0 0 auto
-  margin: 0 10px
-  background: #fff
-  border-radius: 12px
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1)
-  padding: 20px
-  text-align: left
+  background-image: linear-gradient(#ffffff, #93ffc5)
+  border-radius: 15px
+  padding: 25px
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05)
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  position: relative
+  overflow: hidden
+  transition: transform 0.3s ease, box-shadow 0.3s ease
 
-  .logo
-    text-align: center
-    margin-bottom: 12px
+  &:hover
+    transform: translateY(-10px)
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1)
 
-    img
-      max-height: 40px
-      max-width: 120px
-      object-fit: contain
+    .circle .stroke
+      stroke-dashoffset: 0 /* Animate circle on hover */
 
-  h3
-    font-size: 1.1rem
-    margin-bottom: 8px
-    color: #333
+.logo
+  margin-bottom: 15px
+  height: 60px
+  display: flex
+  align-items: center
+  justify-content: center
+
+  img
+    max-height: 100%
+    max-width: 120px
+
+.title
+  font-size: 1.4rem
+  font-weight: 600
+  color: #081c15
+  margin-top: 0
+  margin-bottom: 15px
+  min-height: 66px /* give space for 3 lines of title */
+  display: flex
+  align-items: center
+  justify-content: center
+
+.card-details
+  font-size: 0.9rem
+  color: #081c15
+  margin-bottom: 20px
+  width: 100%
 
   p
-    margin: 6px 0
-    font-size: 0.9rem
-    color: #555
+    margin: 5px 0
 
-  a
-    display: inline-block
-    margin-top: 10px
-    text-decoration: none
-    background: #0073e6
-    color: #fff
-    padding: 8px 14px
-    border-radius: 6px
-    transition: background 0.3s ease
+  strong
+    color: #475569
 
-    &:hover
-      background: #005bb5
+/* Progress bar styling */
+.bar
+  width: 60%
+  height: 8px
+  background-color: #e2e8f0
+  border-radius: 4px
+  position: relative
+  margin-bottom: 20px
 
-.carousel-btn
-  position: absolute
-  top: 50%
-  transform: translateY(-50%)
-  background: rgba(0,0,0,0.5)
-  border: none
-  color: #fff
-  font-size: 1.5rem
-  padding: 10px
-  cursor: pointer
-  border-radius: 50%
-  z-index: 10
+.filledbar
+  width: 100% /* Represents a completed/valid cert */
+  height: 100%
+  background: linear-gradient(90deg, #6fffe9, #007ea7)
+  border-radius: 4px
 
-  &.left
-    left: 10px
-  &.right
-    right: 10px
+/* Animated circle styling */
+.circle
+  position: relative
+  width: 120px
+  height: 120px
+  margin-bottom: 20px
+  display: none /* Hide the decorative circle as it can be distracting */
 
-@media (max-width: 768px)
-  .card
-    min-width: 260px
-    max-width: 280px
+  svg
+    width: 120px
+    height: 120px
 
-@media (max-width: 480px)
-  .card
-    min-width: 90%
-    max-width: 90%
-    margin: 0 auto
+  .stroke
+    fill: none
+    stroke: #3b82f6
+    stroke-width: 10
+    stroke-dasharray: 314 /* Circumference of circle with r=50 */
+    stroke-dashoffset: 314
+    transition: stroke-dashoffset 0.8s ease
 
-  .carousel-btn
-    display: none
+/* Button styling */
+.cert-link
+  text-decoration: none
+  color: #ffffff
+  background-color: #1b4332
+  padding: 10px 20px
+  border-radius: 8px
+  font-weight: 500
+  transition: background-color 0.3s ease
+  margin-top: auto /* Pushes button to the bottom */
+
+  &:hover
+    background-color: #2d6a4f
 
 
 @media only screen and (max-width: 600px)

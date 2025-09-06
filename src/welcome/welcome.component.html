@@ -264,7 +264,7 @@
 
     <div class="scroller">
       <div class="scroller__inner">
-        <ng-container *ngFor="let _ of [0, 1, 2, 3, 4, 5]">
+        <ng-container *ngFor="let _ of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
           <ng-container *ngFor="let icon of skill.icons">
             <img [src]="icon" [alt]="icon" />
           </ng-container>
@@ -274,25 +274,41 @@
   </div>
 </section>
 
-<div class="carousel-container">
-  <button class="carousel-btn left" (click)="moveCarousel(-1)">❮</button>
-  
-  <div class="carousel-track" #carouselTrack>
-    <div class="card" *ngFor="let cert of certifications">
-      <div class="logo">
-        <img [src]="cert.logo" [alt]="cert.issuer + ' logo'" />
-      </div>
-      <h3>{{ cert.name }}</h3>
-      <p><strong>Issued By:</strong> {{ cert.issuer }}</p>
-      <p><strong>Issued Date:</strong> {{ cert.issuedDate }}</p>
-      <p *ngIf="cert.expiryDate"><strong>Expires:</strong> {{ cert.expiryDate }}</p>
-      <p><strong>Credential ID:</strong> {{ cert.credentialId }}</p>
-      <a [href]="cert.link" target="_blank">View Certificate</a>
-    </div>
-  </div>
+<div class="certifications-container">
+  <h2 class="section-title">My Certifications</h2>
+  <div class="cards-grid">
+    @for (cert of certifications; track cert.credentialId) {
+      <div class="card">
+         <div class="logo">
+           <img [src]="cert.logo" [alt]="cert.issuer + ' logo'" />
+         </div>
+        <h3 class="title">{{ cert.name }}</h3>
+         <div class="card-details">
+           <p><strong>Issued By:</strong> {{ cert.issuer }}</p>
+            <p><strong>Credential ID:</strong> {{ cert.credentialId }}</p>
+           <p><strong>Issued Date:</strong> {{ cert.issuedDate }}</p>
+           @if (cert.expiryDate) {
+             <p><strong>Expires:</strong> {{ cert.expiryDate }}</p>
+           }
+         </div>
 
-  <button class="carousel-btn right" (click)="moveCarousel(1)">❯</button>
+        <div class="bar">
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+        </div>
+
+        <div class="circle">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50"/>
+          </svg>
+        </div>
+        
+         <a [href]="cert.link" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+    }
+  </div>
 </div>
+
 
 
 <section class="university-section">

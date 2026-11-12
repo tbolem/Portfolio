@@ -24,6 +24,39 @@
   </div>
 
   <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-icon number-icon">
+        <span class="material-symbols-outlined">looks_4</span>
+      </div>
+      <div class="timeline-content">
+        <h3 class="job-title">Full Stack Java Developer</h3>
+        <a href="https://magtechcorp.com/" class="company"
+          >MagTech Solutions and Corporation
+        </a>
+        <span class="duration">Aug 2025 – Jan 2026</span>
+        <ul class="job-description">
+          <li>
+            • Developed and optimized RESTful APIs and SQL queries using Java
+            11, JDBC, and Swagger documentation to support efficient
+            microservice communication and backend operations.
+          </li>
+          <li>
+            • Built responsive front-end interfaces leveraging Bootstrap and
+            jQuery, ensuring a smooth and user-friendly web experience.
+          </li>
+          <li>
+            • Collaborated in Agile teams to debug, test (JUnit, Maven), and
+            enhance application performance while promoting cross-functional
+            knowledge sharing.
+          </li>
+        </ul>
+        <div class="tools">
+          Agile · Java · Microservices · Spring Framework · Maven · Bootstrap · MySQL · JUnit · Jira
+        </div>
+      </div>
+    </div>
+
     <div class="timeline-item">
       <div class="timeline-icon number-icon">
         <span class="material-symbols-outlined">looks_3</span>
@@ -33,7 +66,7 @@
         <a href="https://www.princetonits.com" class="company"
           >Princeton IT Services</a
         >
-        <span class="duration">May 2024 – Present</span>
+        <span class="duration">May 2024 – July 2025</span>
         <ul class="job-description">
           <li>
             • Developed a full-stack dashboard application to visualize and
@@ -253,30 +286,43 @@
   </div>
 </section>
 
+
 <section class="skills-section">
-  <h2>Skills</h2>
+  <div class="skills-header">
+    <span class="section-tag">WHAT I WORK WITH</span>
+    <h2>Technical <span>Skills</span></h2>
+    <p>Technologies and tools I use to build, create, and innovate.</p>
+  </div>
 
-  <div *ngFor="let skill of skills" class="skill-category">
-    <h3>
-      <img
-        [src]="skill.icon"
-        alt="{{ skill.category }} icon"
-        class="category-icon"
-      />
-      {{ skill.category }}
-    </h3>
+  <div class="skills-grid">
+    <div *ngFor="let skill of skills" class="skill-category">
+      <div class="category-header">
+        <div class="category-icon-wrapper">
+          <img
+            [src]="skill.icon"
+            [alt]="skill.category + ' icon'"
+            class="category-icon"
+          />
+        </div>
+        <h3>{{ skill.category }}</h3>
+        <span class="category-indicator"></span>
+      </div>
 
-    <div class="scroller">
-      <div class="scroller__inner">
-        <ng-container *ngFor="let _ of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
-          <ng-container *ngFor="let icon of skill.icons">
-            <img [src]="icon" [alt]="icon" />
+      <div class="scroller">
+        <div class="scroller__inner">
+          <ng-container *ngFor="let _ of [0, 1]">
+            <ng-container *ngFor="let icon of skill.icons">
+              <div class="skill-icon">
+                <img [src]="icon" [alt]="icon" />
+              </div>
+            </ng-container>
           </ng-container>
-        </ng-container>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <div class="certifications-container">
   <h2 class="section-title">My Certifications</h2>

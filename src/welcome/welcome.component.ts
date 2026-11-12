@@ -20,7 +20,6 @@ export class WelcomeComponent {
       'Icons/backend/microservices.png',
       'Icons/backend/rest-api-icon.svg',
       'https://imgs.search.brave.com/blw7hZW6-nyqy1vhb2Nr7fy2S8BTD3AOQpZNjyNvqtQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9iMTQ3/MjkyMy5zbXVzaGNk/bi5jb20vMTQ3Mjky/My93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MC8xMi9qdW5pdC1s/b2dvLnBuZz9sb3Nz/eT0wJnN0cmlwPTEm/d2VicD0x',
-      'Icons/backend/hibernate.png',
       'Icons/backend/jwt.png',
     ]
   },
@@ -42,8 +41,8 @@ export class WelcomeComponent {
     icons: [
       'https://imgs.search.brave.com/PF4DYxWxgZMz8G6hfcNbS0xJt8MJhKcrMygAQY1wZaI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzUwLzIvYW5ndWxh/ci1pY29uLWxvZ28t/cG5nX3NlZWtsb2dv/LTUwNzMyNC5wbmc',
       'https://imgs.search.brave.com/cOEu3_W1iTAYlQuWmTB1_7JD1w0Sl6fPV9Kr46QRoH0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWVr/dmVjdG9ycy5jb20v/c3RvcmFnZS9pbWFn/ZXMvVFlQRSUyMFND/UklQVCUyMExPR08u/c3Zn',
-      'https://imgs.search.brave.com/XBU8ukj1zPwD-yIu_S3popcI2VFcZR5BB_k4utJDAwY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oZHBu/Zy5jb20vaW1hZ2Vz/L2Jvb3RzdHJhcC1s/b2dvLXBuZy1vcGVu/LTIwMDAucG5n',
       'https://imgs.search.brave.com/3BFATtMXY46M1mm5r7MaGJLpnPXupw2IZVVHHk8ZGRc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cG5nZ2FsbGVyeS5j/b20vd3AtY29udGVu/dC91cGxvYWRzL2h0/bWwtbG9nby0wMi5w/bmc',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPBJnHlFEEsNmHKxav84bxpO98RaGlR0PL8zyjPOVg2A&s=10',
       'https://imgs.search.brave.com/lV43XijqCcOIf8S72xipUZS3OJGx_YX_NGNOpBoXKH4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZnJlZWJpZXN1cHBs/eS5jb20vbG9nb3Mv/bGFyZ2UvMngvY3Nz/My1sb2dvLXBuZy10/cmFuc3BhcmVudC5w/bmc',
       'https://imgs.search.brave.com/MBa2DUYxfNmPfckU4KfOP1mui9pBWQggsglZZ8wDeSw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZnJlZXBuZ2xvZ29z/LmNvbS91cGxvYWRz/L2phdmFzY3JpcHQt/cG5nL2phdmFzY3Jp/cHQtdmVjdG9yLWxv/Z28teWVsbG93LXBu/Zy10cmFuc3BhcmVu/dC1qYXZhc2NyaXB0/LXZlY3Rvci0xMi5w/bmc',
       'https://imgs.search.brave.com/RZ9dNy4rkWi7xBN1QkUbky_ShgTQGP1ACs8yia-qA-w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ub2Rl/anMub3JnL3N0YXRp/Yy9sb2dvcy9ub2Rl/anNEYXJrLnN2Zw'
@@ -105,7 +104,7 @@ export class WelcomeComponent {
       expiryDate: null,
       credentialId: 'UC-9b47ada1-da7e-45cd-9aa5-2be424bf4f0e',
       link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-9b47ada1-da7e-45cd-9aa5-2be424bf4f0e.pdf',
-      logo: '"Icons/Udemy.png"'
+      logo: 'Icons/backend/Udemy.png'
     },
      {
       name: 'Introduction to Git and GitHub',

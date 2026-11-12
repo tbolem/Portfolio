@@ -314,45 +314,125 @@
 </div>
 
 
-
 <section class="university-section">
-  <h2 class="section-title">University</h2>
+
+  <h2 class="section-title">Education</h2>
 
   <div class="uni-design">
+
+    <!-- Education Illustration -->
     <div class="edu-illustration">
       <img src="edu.png" alt="Education Illustration" />
+      <h3>My Academic Journey</h3>
+      <p>Learning, growing, and building towards the future.</p>
     </div>
+
+    <!-- University Cards -->
     <div
       class="university-card"
-      *ngFor="let school of universityData; let i = index"
-    >
+      *ngFor="let school of universityData; let i = index">
+
+      <!-- University Logo -->
       <div class="university-logo">
-        <a href="https://www.kent.edu/">
-          <img [src]="school.logoUrl" [alt]="'Kent State logo' + ' logo'" />
+        <a
+          href="https://www.kent.edu/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <img
+            [src]="school.logoUrl"
+            [alt]="'Kent State University logo'" />
         </a>
       </div>
 
+      <!-- University Details -->
       <div class="university-details">
+
+        <span class="education-tag">
+          <i class="fa-solid fa-graduation-cap"></i>
+          UNIVERSITY EDUCATION
+        </span>
+
+        <h3>{{ school.degree }}</h3>
+
         <p class="location">
-          <i>{{ school.location }}</i>
+          <i class="fa-solid fa-location-dot"></i>
+          {{ school.location }}
         </p>
-        <p class="gpa"><b>GPA</b>: {{ school.gpa }}</p>
-        <p class="degree">{{ school.degree }}</p>
-        <p class="dates">{{ school.dates }}</p>
-        <p class="description">{{ school.description }}</p>
-        <a href="S2022 Dean's List.pdf" download class="download-link">
-          <b>Awards</b>: <i>Dean's List Spring 2022</i>
-        </a>
+
+        <div class="education-meta">
+
+          <div class="meta-item">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <span>GPA</span>
+              <strong>{{ school.gpa }}</strong>
+            </div>
+          </div>
+
+          <div class="meta-item">
+            <i class="fa-regular fa-calendar"></i>
+            <div>
+              <span>Duration</span>
+              <strong>{{ school.dates }}</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="description">
+          {{ school.description }}
+        </p>
+
+        <div class="university-footer">
+          <a
+            href="S2022 Dean's List.pdf"
+            download
+            class="download-link">
+            <i class="fa-solid fa-file-pdf"></i>
+            View Dean's List Award
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+
       </div>
     </div>
+
   </div>
 </section>
 
+
+
 <div class="resume-section">
-  <h1 style="color: white; font-weight: bold">Know of any job openings?</h1>
-  <h3>Kindly please share my resume!</h3>
-  <a href="Teja-Resume.docx" download>
-    <button class="download-btn">Resume</button>
-  </a>
+  <div class="resume-content">
+    <span class="resume-tag">
+      <i class="fa-solid fa-briefcase"></i>
+      LET'S CONNECT
+    </span>
+
+    <h1>Know of any job openings?</h1>
+
+    <p>
+      I'd love to hear about new opportunities.
+      If you think my skills are a good fit,
+      feel free to explore and share my resume.
+    </p>
+
+    <div class="resume-actions">
+      <a href="Teja-Resume.docx" download class="download-btn">
+        <i class="fa-brands fa-microsoft"></i>
+        Download DOCX
+      </a>
+
+      <a href="Teja-Resume.pdf" download class="download-btn primary">
+        <i class="fa-solid fa-file-pdf"></i>
+        Download PDF
+      </a>
+    </div>
+  </div>
+
+  <div class="resume-icon">
+    <i class="fa-solid fa-file-lines"></i>
+  </div>
 </div>
+
 

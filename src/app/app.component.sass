@@ -77,29 +77,147 @@ nav
         text-decoration: none
 
 
-footer
-    text-align: center
+
+.site-footer
+  width: 100%
+  box-sizing: border-box
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 30px auto 0
+  padding: 45px 5%
+  background: linear-gradient(145deg, #111820, #050505)
+  border-top: 2px solid #00f0ff
+  box-shadow: 0 -5px 20px rgba(0, 240, 255, 0.08)
+  position: relative
+  overflow: hidden
+
+  &::before
+    content: ''
+    position: absolute
+    width: 300px
+    height: 300px
+    background: rgba(0, 240, 255, 0.06)
+    filter: blur(100px)
+    left: 50%
+    top: 0
+    transform: translateX(-50%)
+
+  .footer-decoration
+    width: 20%
     display: flex
-    align-items: center
-    justify-content: space-around
-    margin: auto
-    padding: 30px
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%)
+    justify-content: center
+    opacity: 0.75
+
     svg
-        width: 50%
-        height: 4.5vw
+      width: 100%
+      max-width: 140px
+      height: auto
+
+      path
+        fill: #00f0ff
+
+  .footer-middle
+    width: 60%
+    z-index: 1
+
+    .footer-subtitle
+      color: #e6faff
+      font-size: 1rem
+      line-height: 1.7
+      margin-bottom: 25px
+
+    .social-links
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 20px
+      margin-bottom: 25px
+
+    .social-icon
+      width: 48px
+      height: 48px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #00f0ff
+      font-size: 1.4rem
+      background: #111820
+      border: 2px solid #00f0ff
+      border-radius: 12px
+      text-decoration: none
+      transition: all 0.3s ease
+      position: relative
+
+      &:hover
+        color: #050505
+        background: #00f0ff
+        box-shadow: 0 0 18px rgba(0, 240, 255, 0.5)
+        transform: translateY(-5px)
+
+      &::after
+        content: attr(data-tooltip)
+        position: absolute
+        bottom: 120%
+        left: 50%
+        transform: translateX(-50%)
+        color: #00f0ff
+        background: #111820
+        border: 1px solid #00f0ff
+        padding: 5px 10px
+        border-radius: 5px
+        font-size: 0.75rem
+        opacity: 0
+        pointer-events: none
+        transition: opacity 0.3s ease
+        white-space: nowrap
+
+      &:hover::after
+        opacity: 1
+
+    .footer-divider
+      width: 70%
+      height: 1px
+      background: linear-gradient(
+        90deg,
+        transparent,
+        #00f0ff,
+        transparent
+      )
+      margin: 0 auto 20px
+
+    .copyright
+      color: #a8c8d0
+      font-size: 0.9rem
+      line-height: 1.8
+      margin: 0
+
+      span
+        color: #00f0ff
+        font-weight: bold
+        font-family: Kizard
+
+@media (max-width: 768px)
+  .site-footer
+    padding: 35px 20px
+
+    .footer-decoration
+      display: none
+
     .footer-middle
-        width: 50%
-        a
-            color: #FAF7F3
-            font-size: 5vh
-            margin: 0 8px
-        i:hover
-            color: #FFFD8C
-        p
-            font-family: kizard, sans-serif
-            font-size: 2.5vh
-            color: white
+      width: 100%
+
+      .social-links
+        gap: 15px
+
+      .social-icon
+        width: 42px
+        height: 42px
+        font-size: 1.2rem
+
+      .footer-divider
+        width: 90%
 
 @media only screen and (max-width: 600px)
     nav

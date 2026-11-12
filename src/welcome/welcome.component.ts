@@ -20,7 +20,7 @@ export class WelcomeComponent {
       'Icons/backend/microservices.png',
       'Icons/backend/rest-api-icon.svg',
       'https://imgs.search.brave.com/blw7hZW6-nyqy1vhb2Nr7fy2S8BTD3AOQpZNjyNvqtQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9iMTQ3/MjkyMy5zbXVzaGNk/bi5jb20vMTQ3Mjky/My93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MC8xMi9qdW5pdC1s/b2dvLnBuZz9sb3Nz/eT0wJnN0cmlwPTEm/d2VicD0x',
-      'https://imgs.search.brave.com/-W9dis3v_pi48yZ7Fgde5VmxRZd-mtTHXtFu4MS-nBA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9qd3Qu/dHBsYW50LmNvbS5h/dS9pbWcvYXV0aDBf/bG9nby5zdmc',
+      'Icons/backend/hibernate.png',
       'Icons/backend/jwt.png',
     ]
   },
@@ -72,7 +72,7 @@ export class WelcomeComponent {
     {
       location: 'Kent, OH',
       degree: 'B.S. in Computer Science',
-      dates: 'Aug 2020 - May 2023',
+      dates: 'Aug 2018 - May 2023',
       description: 'Graduated with a Bachelor of Science in Computer Science from Kent State University, focusing on software development and data structures.',
       gpa: '3.732',
       logoUrl: 'kent-logo.png'
@@ -105,7 +105,7 @@ export class WelcomeComponent {
       expiryDate: null,
       credentialId: 'UC-9b47ada1-da7e-45cd-9aa5-2be424bf4f0e',
       link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-9b47ada1-da7e-45cd-9aa5-2be424bf4f0e.pdf',
-      logo: 'https://imgs.search.brave.com/EoP1vbYvIQWs9KPzYEw-QCE-c2C--ujmwZ4k437x5Nc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmdo/ZHByby5jb20vd3At/Y29udGVudC90aGVt/ZXMvcG5naGRwcm8v/ZG93bmxvYWQvc29j/aWFsLW1lZGlhLWFu/ZC1icmFuZHMvdWRl/bXktbG9nby5wbmc'
+      logo: '"Icons/Udemy.png"'
     },
      {
       name: 'Introduction to Git and GitHub',
